@@ -38,26 +38,26 @@ This call makes a complete set based change of all employees in the system.
 | ----------------- | ---------------------------------------------------------------------------- |
 | EmployeeID*       | Your internal primary key. Unique. String. Max length: 50                    |
 | InvitationDate    | Date and time when an invitation should be sent out. Only for new employees. If obmitted then then invitation will be sent immediately or at 8 o'clock if outside business hours                                     |
-| Firstname*        | Firstname of the employee. String. Max length: 150. Must match Regex: `^[\p{L} \-\'\.0-9]+$` |
-| Lastname*         | Lastname of the employee. String. Max length: 150. Must match Regex: `^[\p{L} \-\'\.0-9]+$` |
+| Firstname*        | Firstname of the employee. String. Max length: 150. Must match Regex: ``^[\p{L} \-\'\´\`\.0-9]+$`` |
+| Lastname*         | Lastname of the employee. String. Max length: 150. Must match Regex: ``^[\p{L} \-\'\´\`\.0-9]+$`` |
 | Phonenumber       | Cell phone. String. Must match regex: `^\+[0-9]{6,20}$` E.g. +4523232323                |
 | Email*            | E-mail address                   |
 | Gender            | Gender. Integer. Values: 0 = Male, 1 = Female, 9 = Not known                   |
 | EmploymentStatus* | Employment Status. Integer. 0 = Active, 1 = "on leave" e.g. maternity leave etc.  |
-| JobTitle         | String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$`. E.g. "Sales Manager" or "CEO"     |
-| Department       | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Role             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| ImmediateManager | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim1             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim2             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim3             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim4             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim5             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim6             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim7             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim8             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim9             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
-| Dim10            | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \/\,\.\\0-9]+$` |
+| JobTitle         | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |
+| Department       | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Role             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| ImmediateManager | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim1             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim2             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim3             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim4             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim5             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim6             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim7             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim8             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim9             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dim10            | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
 
 
 ### Request

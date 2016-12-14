@@ -37,11 +37,11 @@ This call makes a complete set based change of all employees in the system.
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | EmployeeID*       | Your internal primary key. Unique. String. Max length: 50                    |
-| InvitationDate    | Date and time when an invitation should be sent out. Only for new employees. If obmitted then then invitation will be sent immediately or at 8 o'clock if outside business hours                                     |
+| InvitationDate    | Date and time when an invitation should be sent out. Only for new employees. If obmitted then then invitation will be sent immediately or at 8 o'clock if outside business hours. String. yyyy-MM-ddTHH:mm:ssZ        |
 | Firstname*        | Firstname of the employee. String. Max length: 150. Must match Regex: ``^[\p{L} \-\'\´\`\.0-9]+$`` |
 | Lastname*         | Lastname of the employee. String. Max length: 150. Must match Regex: ``^[\p{L} \-\'\´\`\.0-9]+$`` |
-| Phonenumber       | Cell phone. String. Must match regex: `^\+[0-9]{6,20}$` E.g. +4523232323                |
-| Email*            | E-mail address                   |
+| Phonenumber       | Cell phone. Unique. String. Must match regex: `^\+[0-9]{6,20}$` E.g. +4523232323                |
+| Email*            | E-mail address. Unique.                   |
 | Gender            | Gender. Integer. Values: 0 = Male, 1 = Female, 9 = Not known                   |
 | EmploymentStatus* | Employment Status. Integer. 0 = Active, 1 = "on leave" e.g. maternity leave etc.  |
 | JobTitle         | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |

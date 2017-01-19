@@ -3,8 +3,8 @@
 
 ## Endpoints
 
-- Test endpoint: wlb-uat-ne1-api.azurewebsites.net 
-- Production endpoint: ne1-api.worklifebarometer.com
+- Test endpoint: https://wlb-uat-ne1-api.azurewebsites.net/
+- Production endpoint: https://api-ne1.worklifebarometer.com/
 
 ## Security
 All calls to the API must be authenticated by presenting a valid JWT (JSON Web Token).

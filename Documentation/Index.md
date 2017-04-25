@@ -1,5 +1,5 @@
 # Howdy API Documentation
-> These pages contains samples and specifications on how to integrate Howdy with HR-systems in order to main employee data
+> These pages contains samples and specifications on how to integrate Howdy with HR-systems in order to maintain employee data
 
 ## Endpoints
 

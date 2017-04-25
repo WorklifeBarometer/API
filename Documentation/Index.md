@@ -7,7 +7,7 @@
 - Production endpoint: https://api-ne1.worklifebarometer.com/
 
 ## Security
-All calls to the API must be authenticated by presenting a valid JWT (JSON Web Token).
+All calls to the API must be authenticated by presenting a valid JWT ([JSON Web Token](https://jwt.io/)).
 The Token can be set in one of two ways:
 - As a HTTP Header: Add is as `Authorization: Bearer <API_TOKEN_HERE>` to each request (as shown below)
 - As a Query String parameter: Pass it as `?access_token=<API_TOKEN_HERE>` to each request
@@ -18,7 +18,7 @@ The token itself will be issued by a Portal Administrator
 This call returns all Employees stored in Howdy.
 ### Request
 ```http
-GET /v1.0/company/1057/employee HTTP/1.1
+GET /v1.0/company/{companyId}/employee HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Cache-Control: no-cache

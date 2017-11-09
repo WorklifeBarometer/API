@@ -29,8 +29,11 @@ namespace ActiveDirectoryExample
 
         private static async Task StartAsync()
         {
+            //TODO: Choose your system/implementatino of choice
             IHRSystem hrSystem = new ActiveDirectoryImplementation();
-            var employeeData = hrSystem.GetAllHowdyUsers();
+            //IHRSystem hrSystem = new SqlServerImplementation();
+
+            var employeeData = await hrSystem.GetAllHowdyUsersAsync();
 
             Console.WriteLine("Howdy Data to be posted:");
             Console.WriteLine(employeeData);

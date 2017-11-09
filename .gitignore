@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Samples/ActiveDirectoryExample/packages/Newtonsoft.Json.10.0.3
+/Samples/ActiveDirectoryExample/.vs/ActiveDirectoryExample/v15
+/Samples/ActiveDirectoryExample/ActiveDirectoryExample/bin/Debug
+/Samples/ActiveDirectoryExample/ActiveDirectoryExample/obj/Debug
+/Samples/ActiveDirectoryExample/ActiveDirectoryExample/ActiveDirectoryExample.csproj.user

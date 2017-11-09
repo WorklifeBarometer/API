@@ -9,6 +9,6 @@ namespace ActiveDirectoryExample
 {
     interface IHRSystem
     {
-        JArray GetAllHowdyUsers(); 
+        Task<JArray> GetAllHowdyUsersAsync(); 
     }
 }

@@ -12,7 +12,7 @@ namespace ActiveDirectoryExample
     {
         //TODO: Inset you own Path
         private const string LDAP_SEARCH_PATH = "LDAP://OU=Users,OU=Howdy,DC=wlb,DC=local";
-        public JArray GetAllHowdyUsers()
+        public async Task<JArray> GetAllHowdyUsersAsync()
         {
             DirectoryEntry ldapConnection = CreateLdapConnection();
 
@@ -26,7 +26,7 @@ namespace ActiveDirectoryExample
             {
                 var howdyPayload = ExtractHowdyData(allEmployees);
 
-                return howdyPayload;
+                return await Task.FromResult(howdyPayload);
             }
             else
             {

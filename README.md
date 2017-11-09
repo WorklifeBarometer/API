@@ -2,4 +2,5 @@
 Howdy API Documentation
 
 - [API Documentation](./Documentation/Index.md)
-- C# Sample code (coming soon)
+- C# Sample code
+  - [Active Directory](./Samples/ActiveDirectoryExample/ActiveDirectoryExample)

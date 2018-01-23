@@ -9,7 +9,7 @@
 ## Security
 All calls to the API must be authenticated by presenting a valid JWT ([JSON Web Token](https://jwt.io/)).
 The Token can be set in one of two ways:
-- As a HTTP Header: Add is as `Authorization: Bearer <API_TOKEN_HERE>` to each request (as shown below)
+- As a HTTP Header: Add it as `Authorization: Bearer <API_TOKEN_HERE>` to each request (as shown below)
 - As a Query String parameter: Pass it as `?access_token=<API_TOKEN_HERE>` to each request
 
 The token itself will be issued by a Portal Administrator

@@ -71,8 +71,12 @@ Cache-Control: no-cache
  
 [
   {
-    "Phonenumber": "+00008462",
+    "EmployeeID": "eb8a4f10-1c24-409f-b680-92ae71253339",
+    "Firstname": "Bilbo",
+    "Lastname": "Baggins"
     "Email": "8462@dev.test",
+    "EmploymentStatus": 0,
+    "Phonenumber": "+00008462",
     "Birthday": null,
     "Gender": 9,
     ...

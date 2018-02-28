@@ -19,7 +19,7 @@ To obtain the token do the following:
  - The API user should have the role HRIntegration. Click the three dots and then "Generate new App Token".
  - This should open a dialog box with a newly generated token
 
-The Token can be set in one of two ways:
+The Token can be sent in one of two ways:
 - As a HTTP Header: Add it as `Authorization: Bearer <API_TOKEN_HERE>` to each request (as shown below)
 - As a Query String parameter: Pass it as `?access_token=<API_TOKEN_HERE>` to each request
 

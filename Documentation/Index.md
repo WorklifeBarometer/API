@@ -8,14 +8,24 @@
 
 ## Security
 All calls to the API must be authenticated by presenting a valid JWT ([JSON Web Token](https://jwt.io/)).
+
+To obtain the token do the following:
+- Access "My worklife barometer" on one of the following urls:
+    - Production: https://my.worklifebarometer.com
+    - Test: https://wlb-uat-g-my.azurewebsites.net/
+- Navigate to Company > Integrations and "Turn on external integration"
+- "Turn on automatic integration" and set the max difference to 25
+- Navigate to Users and look for a user with the name "<CompanyName> API User" (if you don't see it, please contact support at support@worklifebarometer.com)
+ - The API user should have the role HRIntegration. Click the three dots and then "Generate new App Token".
+ - This should open a dialog box with a newly generated token
+
 The Token can be set in one of two ways:
 - As a HTTP Header: Add it as `Authorization: Bearer <API_TOKEN_HERE>` to each request (as shown below)
 - As a Query String parameter: Pass it as `?access_token=<API_TOKEN_HERE>` to each request
 
-The token itself will be issued by a Portal Administrator
-
 ## GET /v1.0/Company/{companyId}/Employee
-This call returns all Employees stored in Howdy.
+This call returns all employees stored in Howdy, that were created through the API. Employees created through the portal interface will not be shown here.
+
 ### Request
 ```http
 GET /v1.0/company/{companyId}/employee HTTP/1.1

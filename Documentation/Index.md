@@ -24,7 +24,7 @@ The Token can be sent in one of two ways:
 - As a Query String parameter: Pass it as `?access_token=<API_TOKEN_HERE>` to each request
 
 ## GET /v1.0/Company/{companyId}/Employee
-This call returns all employees stored in Howdy, that were created through the API. Employees created through the portal interface will not be shown here.
+This call returns all employees stored in Howdy, that were created through the API. Employees created through the portal interface will not be included.
 
 ### Request
 ```http

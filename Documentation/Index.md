@@ -3,13 +3,16 @@
 
 ## Endpoints
 
+- Test endpoint: https://wlb-uat-ne1-api.azurewebsites.net/
 - Production endpoint: https://api-ne1.worklifebarometer.com/
 
 ## Security
 All calls to the API must be authenticated by presenting a valid JWT ([JSON Web Token](https://jwt.io/)).
 
 To obtain the token do the following:
-- Access "My worklife barometer" on https://my.worklifebarometer.com/
+- Access "My worklife barometer" on one of the following urls:
+    - Production: https://my.worklifebarometer.com/
+    - Test: https://wlb-uat-g-my.azurewebsites.net/
 - Navigate to Company > Integrations and "Turn on external integration"
 - "Turn on automatic integration" and set the max difference to 25
 - Navigate to Users and look for a user with the name "&lt;CompanyName&gt; API User" (if you don't see it, please contact support at support@worklifebarometer.com)

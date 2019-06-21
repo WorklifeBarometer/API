@@ -7,17 +7,17 @@ See https://github.com/WorklifeBarometer/API/blob/master/Documentation/Index.md#
 
 ### Request data from the API
 
-In Power BI choose Get Data > Web. Type in this URL, where you've replace {companyId} with your company id:
+In Power BI choose Get Data > Web. Type in this URL, where you've replaced {companyId} with your company id:
 
  https://api-ne1.worklifebarometer.com/v1.0/Dashboard/Company/{companyId}/answers
  
-Then click Advanced and fill in an HTTP request parameter as follows: 
+Don't click OK yet. Instead click Advanced and fill in an HTTP request parameter as follows: 
 - In the header key choose Authorization
 - In the header value type "Bearer " (including the space), followed by your access token.
 
 ![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_authorization.png)
 
-- Click OK and on the next page simply click Connect. After a little while you should now see something like this:
+- Now click OK and on the next page simply click Connect. After a little while you should now see something like this:
 
 ![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_unmodified_result.png)
 

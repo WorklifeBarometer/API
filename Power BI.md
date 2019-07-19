@@ -55,3 +55,9 @@ We need to extract the right parts of the data for use by Power BI:
 - Now you should see something like this, depending on your departmental structure and wellbeing data of course:
 
 ![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_final_result.png)
+
+### Case data
+
+You can also read case data from the API. The structure of the data is a bit more complicated and you'll have to figure out how to adapt it to Power BI yourself, but if you have it working for answers it shouldn't be much different from that. The endpoint for that is:
+
+GET https://api-ne1.worklifebarometer.com/v1.0/Dashboard/Company/{companyId}

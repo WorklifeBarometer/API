@@ -10,9 +10,9 @@
 All calls to the API must be authenticated by presenting a valid JWT ([JSON Web Token](https://jwt.io/)).
 
 To obtain the token do the following:
-- Access "My worklife barometer" on one of the following urls:
-    - Production: https://my.worklifebarometer.com/
-    - Test: https://wlb-uat-g-my.azurewebsites.net/
+- Access the Howdy Dashboard on one of the following urls:
+    - Production: https://dashboard.worklifebarometer.com/
+    - Test: https://auth.worklifebarometer.com > Choose the test environment
 - Navigate to Company > Integrations and "Turn on external integration"
 - "Turn on automatic integration" and set the max difference to 25
 - Navigate to Users and look for a user with the name "&lt;CompanyName&gt; API User" (if you don't see it, please contact support at support@worklifebarometer.com)
@@ -24,7 +24,7 @@ The Token can be sent in one of two ways:
 - As a Query String parameter: Pass it as `?access_token=<API_TOKEN_HERE>` to each request
 
 ## GET /v1.0/Company/{companyId}/Employee
-This call returns all employees stored in Howdy, that were created through the API. Employees created through the portal interface will not be included.
+This call returns all employees stored in Howdy, that were created through the API. Employees created directly in the dashboard interface will not be included.
 
 ### Request
 ```http
@@ -50,24 +50,21 @@ This call makes a complete set based change of all employees in the system.
 | InvitationDate    | Date and time when an invitation should be sent out. Only for new employees. If obmitted then then invitation will be sent immediately or at 8 o'clock if outside business hours. String. yyyy-MM-ddTHH:mm:ssZ        |
 | Firstname*        | Firstname of the employee. String. Max length: 150. Must match Regex: ``^[\p{L} \-\'\´\`\.0-9]+$`` |
 | Lastname*         | Lastname of the employee. String. Max length: 150. Must match Regex: ``^[\p{L} \-\'\´\`\.0-9]+$`` |
+| Birthday          | Optional birthday of the employee, specified as YYYY-MM-DD
 | Phonenumber       | Cell phone. Unique. String. Must match regex: `^\+[0-9]{6,20}$` E.g. +4523232323                |
 | Email*            | E-mail address. Unique. In order to maintain the anonymity of employees, this cannot be changed through the API after it is first created. Only the employee and howdy support can change it.                 |
 | Gender            | Gender. Integer. Values: 0 = Male, 1 = Female, 9 = Not known                   |
 | EmploymentStatus* | Employment Status. Integer. 0 = Active, 1 = "on leave" e.g. maternity leave etc.  |
-| JobTitle         | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |
-| Department       | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Role             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| ImmediateManager | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim1             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim2             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim3             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim4             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim5             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim6             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim7             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim8             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim9             | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| Dim10            | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| JobTitle          | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |
+| HRContact         | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |
+| HealthOffer       | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |
+| Department        | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Role              | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| ImmediateManager  | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| Dimensions        | Sub-structure with customer-specific data |
+| <Dim1>            | Reporting specific data. Eg. Location, Division, etc. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| <Dim2>            | Reporting specific data. Eg. Location, Division, etc. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| ...               | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
 
 
 ### Request
@@ -87,9 +84,11 @@ Cache-Control: no-cache
     "Email": "8462@dev.test",
     "EmploymentStatus": 0,
     "Phonenumber": "+00008462",
-    "Birthday": null,
     "Gender": 9,
-    ...
+    "Dimensions": {
+        "Location": "The Shire",
+        "Division": "Hobbits"
+    }
   },
   ...
 ]
@@ -100,7 +99,22 @@ Cache-Control: no-cache
 *200 OK*
 ```json
 {
-  "ApiOperationId": "string"
+  "ApiOperationId": "string",
+  "Inserted": "integer",
+  "Updated": "integer",
+  "Removed": "integer",
+  "WasQueued": "false"
+}
+```
+
+*202 Accepted*
+```json
+{
+  "ApiOperationId": "string",
+  "Inserted": 0,
+  "Updated": 0,
+  "Removed": 0,
+  "WasQueued": "true"
 }
 ```
 
@@ -110,8 +124,6 @@ Cache-Control: no-cache
   "ApiOperationId": "string",
  "ValidationErrors": ["string"]
 }
-``` 
-The `ApiOperationId` can be used for further diagnostics so please log this if any errors are returned from the service
- 
+```
 
-
+The `ApiOperationId` can be used for further diagnostics so please log this if any errors are returned from the service.

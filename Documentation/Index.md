@@ -62,8 +62,8 @@ This call makes a complete set based change of all employees in the system.
 | Role              | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
 | ImmediateManager  | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
 | Dimensions        | Sub-structure with customer-specific data |
-| <Dim1>            | Reporting specific data. Eg. Location, Division, etc. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
-| <Dim2>            | Reporting specific data. Eg. Location, Division, etc. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| {Dimension1}      | Reporting specific data. Eg. Location, Division, etc. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
+| {Dimension2}      | Reporting specific data. Eg. Location, Division, etc. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
 | ...               | Reporting specific data. String. Max length: 50. Must match regex: `^[\p{L} \%\#\$\(\)\&\/\,\.\\0-9\-]+$` |
 
 

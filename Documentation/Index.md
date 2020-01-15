@@ -147,8 +147,7 @@ Cache-Control: no-cache
         "Method": "string",
         "HttpStatusCode": "integer",
         "HttpStatusReason": "string"
-    },
-    ...
+    }    
 ]
 ```
 

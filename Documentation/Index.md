@@ -35,7 +35,7 @@ Cache-Control: no-cache
 ```
 
 ## PUT /v1.0/Company/{companyId}/Employee
-This call makes a complete set based change of all employees in the system.
+This call makes a complete set based change of all employees in the system. Large requests may be put on a queue, as processing can take a while. To monitor such queued requests use the api calls action (see below).
 
 >If employee A, B and C exists in Howdy and employee B, C and D are sent via this call then:
 >- A will be removed
@@ -126,4 +126,34 @@ Cache-Control: no-cache
 }
 ```
 
-The `ApiOperationId` can be used for further diagnostics so please log this if any errors are returned from the service.
+## GET v1.0/Company/{companyId}/ApiCalls
+
+### Request
+```http
+GET /v1.0/company/{companyId}/apicalls HTTP/1.1
+Host: <API_ENDPOINT>
+Authorization: Bearer <API_TOKEN_HERE>
+Cache-Control: no-cache
+```
+
+### Response
+```json
+[
+    {
+        "ApiOperationId": "GUID",
+        "UserId": "integer",
+        "Username": "string",
+        "CreatedOn": "DateTime",
+        "Method": "string",
+        "HttpStatusCode": "integer",
+        "HttpStatusReason": "string"
+    },
+    ...
+]
+```
+
+The lifetime of a queued request is a follows:
+1. Created. `HttpStatusCode` and `HttpStatusReason` will be empty
+2. Validated and queued. `HttpStatusCode` will be `202` and `HttpStatusReason` will be `Accepted`. If validation fails, the request will immediately change status to 4xx if it is deemed to be a problem with the data or 5xx if an unexpected problem has happened on the server.
+3. Processing started. `HttpStatusCode` will remain `202` and `HttpStatusReason` will change to `Processing...`.  Usually processing will start within a couple of minutes, but if the server is busy it could take up to an hour.
+4. Processing completed. `HttpStatusCode` will change to `200` if everything went okay. If not, the code and reason should provide some explanation.

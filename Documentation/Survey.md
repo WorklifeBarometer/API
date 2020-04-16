@@ -1,11 +1,14 @@
 # Survey API Documentation
+
 > This page contains specifications of Survey API. For information on endpoints, security and more general information, please visit the [main page](./Index.md).
 
 ## GET v1.0/Survey?companyId={companyId}
+
 Get all surveys in company.
 
 ### Request
-```http
+
+``` http
 GET /v1.0/survey?companyId={companyId} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -13,7 +16,8 @@ Cache-Control: no-cache
 ```
 
 ### Response
-```json
+
+``` json
 [
     {
         "companyId": "integer",
@@ -28,10 +32,12 @@ Cache-Control: no-cache
 ```
 
 ## GET v1.0/Survey/{surveyId}
+
 Get survey by its id.
 
 ### Request
-```http
+
+``` http
 GET /v1.0/survey/{surveyId} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -39,7 +45,8 @@ Cache-Control: no-cache
 ```
 
 ### Response
-```json
+
+``` json
 {
 	"end": "DateTime",
 	"id": "integer",
@@ -58,13 +65,16 @@ Cache-Control: no-cache
 	"surveySelectionRule": "SurveySelectionRule JSON string"
 }
 ```
+
 Please find definition of [QuestionConfiguration](#questionconfiguration) and [SurveySelectionRule](#surveyselectionrule).
 
 ## GET v1.0/Survey/Templates
+
 Get all survey templates available.
 
 ### Request
-```http
+
+``` http
 GET /v1.0/survey/templates HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -72,7 +82,8 @@ Cache-Control: no-cache
 ```
 
 ### Response
-```json
+
+``` json
 [
     {
         "id": "integer",
@@ -82,10 +93,12 @@ Cache-Control: no-cache
 ```
 
 ## GET v1.0/Survey/Template/{templateId}
+
 Get template by id.
 
 ### Request
-```http
+
+``` http
 GET /v1.0/survey/template/{templateId} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -93,7 +106,8 @@ Cache-Control: no-cache
 ```
 
 ### Response
-```json
+
+``` json
 [
     {
         "name": "string",
@@ -109,9 +123,11 @@ Cache-Control: no-cache
     }
 ]
 ```
+
 Please find definition of [QuestionConfiguration](#questionconfiguration).
 
 ## POST v1.0/Survey
+
 Create new survey.
 
 #### Data model
@@ -120,17 +136,17 @@ All fields are reguired.
 
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
-| Name              | Name of the new survey. String. Max length: 50. Not null.                    |
-| CompanyId         | Id of your company. Integer, not null.         					           |
-| Start             | Date and time when a new survey starts to be available. String, not null. yyyy-MM-ddTHH:mm:ssZ        |
-| End               | Date and time when a new survey starts to be unavailable. String, not null. yyyy-MM-ddTHH:mm:ssZ        |
-| State             | Integer, not null. Valid value of [SurveyState](#surveystate) enum.          |
-| SurveySelectionRule | JSON string of [SurveySelectionRule](#surveyselectionrule) interface.      |
-| Questions         | Questions of the new survey. Array of [SurveyQuestion](#surveyquestion) type objects. Each survey must contain Cover page and Thank you page. |
-
+| Name              | Name of the new survey. String. Max length: 50. Not null.|
+| CompanyId         | Id of your company. Integer, not null.					           |
+| Start             | Date and time when a new survey starts to be available. String, not null.yyyy-MM-ddTHH:mm:ssZ        |
+| End               | Date and time when a new survey starts to be unavailable. String, not null.yyyy-MM-ddTHH:mm:ssZ        |
+| State             | Integer, not null. Valid value of [SurveyState](#surveystate) enum.|
+| SurveySelectionRule | JSON string of [SurveySelectionRule](#surveyselectionrule) interface.|
+| Questions         | Questions of the new survey. Array of [SurveyQuestion](#surveyquestion) type objects. Each survey must contain Cover page and Thank you page.|
 
 ### Request
-```http
+
+``` http
 POST /v1.0/survey HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -168,21 +184,25 @@ Cache-Control: no-cache
 ```
 
 ### Response
+
 Integer, id of the new survey.
 
 ## POST v1.0/Survey/Update
+
 Update existing survey.
 
 #### Data model
+
 All fields from [v1.0/Survey](#post-v1.0/Survey) plus following:
 
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
-| Id                | Id of the survey. Integer, not null.     						               |
-| SurveyDefinitionId | Id of corresponding survey definition. Integer, not null. This field is not subject to change. Each survey has fixed survey definition. |
+| Id                | Id of the survey. Integer, not null.						               |
+| SurveyDefinitionId | Id of corresponding survey definition. Integer, not null. This field is not subject to change. Each survey has fixed survey definition.|
 
 ### Request
-```http
+
+``` http
 POST /v1.0/survey/update HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -222,16 +242,18 @@ Cache-Control: no-cache
 ```
 
 ### Response
+
 200 OK empty response
 
-
 ## POST v1.0/Survey/ChangeState/{surveyState}
+
 Change state of survey ids included in request payload as an array of integers.
 
 Please find all possible survey states [here](#SurveyState).
 
 ### Request
-```http
+
+``` http
 POST /v1.0/Survey/ChangeState/{surveySate} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
@@ -242,12 +264,14 @@ Cache-Control: no-cache
 ```
 
 ### Response
+
 200 OK empty response
 
 ## Interfaces
 
 ### QuestionConfiguration
-```json
+
+``` json
 {
 	"AnswerOptions": [
 		{
@@ -259,14 +283,16 @@ Cache-Control: no-cache
 ```
 
 ### SurveySelectionRule
+
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
-| Frequency         | How often can survey be answered. Options: "Hourly", "Monthly", "Quarterly", "Continuous".   |
-| EnabledLanguages  | Array of language objects. Please find list of all enabled languages [here](./Index.md#get-v1.0/Company/{companyId}/Language/Enabled). |
-| Filter		    | Object where key is company dimension key and value is desired dimension value. Only one key value pair is supported. |
+| Frequency         | How often can survey be answered. Options: "Hourly", "Monthly", "Quarterly", "Continuous".|
+| EnabledLanguages  | Array of language objects. Please find list of all enabled languages [here](./Index.md#get-v1.0/Company/{companyId}/Language/Enabled).|
+| Filter		    | Object where key is company dimension key and value is desired dimension value. Only one key value pair is supported.|
 
 Example:
-```json
+
+``` json
 {
 	"Frequency": "Hourly",
 	"EnabledLanguages": [
@@ -283,10 +309,12 @@ Example:
 ```
 
 ### QuestionTexts
+
 QuestionText is JSON object where key is language id and value is text.
 
 Example:
-```json
+
+``` json
 {
 	"1045": "Simple question text in English",
 	"1041": "Enkel spørgsmålstekst på dansk"
@@ -294,15 +322,17 @@ Example:
 ```
 
 ### SurveyQuestion
+
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
-| Type              | Type of the question. Integer, not null. Valid value of [QuestionType](#questiontype) enum. |
-| Texts             | Object of type [QuestionTexts](#questiontexts). Not null.                    |
-| AnswerOptions     | Array of [AnswerOption](#answeroption) type objects. Required when Type == 2. |
-| Deleted           | Optional, true when question should be deleted. |
+| Type              | Type of the question. Integer, not null. Valid value of [QuestionType](#questiontype) enum.|
+| Texts             | Object of type [QuestionTexts](#questiontexts). Not null.|
+| AnswerOptions     | Array of [AnswerOption](#answeroption) type objects. Required when Type == 2.|
+| Deleted           | Optional, true when question should be deleted.|
 
 Example:
-```json
+
+``` json
 {
 	"Type": 2,
 	"Texts": {
@@ -324,10 +354,10 @@ Example:
 ```
 
 ### AnswerOption
+
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | Texts             | Object of type [QuestionTexts](#questiontexts). Not null.					   |
-
 
 ## Enums
 
@@ -338,9 +368,11 @@ Example:
 | 3                 | Inactive survey															   |
 
 ### QuestionType
+
 | Value             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | 1                 | Cover page																   |
 | 2                 | Question with answer options												   |
 | 3                 | Question with text answer													   |
 | 99                | Thank you page															   |
+

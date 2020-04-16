@@ -6,7 +6,7 @@ Get all surveys in company.
 
 ### Request
 ```http
-GET /v1.0/Survey?companyId={companyId} HTTP/1.1
+GET /v1.0/survey?companyId={companyId} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Cache-Control: no-cache
@@ -32,7 +32,7 @@ Get survey by its id.
 
 ### Request
 ```http
-GET /v1.0/Survey/{surveyId} HTTP/1.1
+GET /v1.0/survey/{surveyId} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Cache-Control: no-cache
@@ -65,7 +65,7 @@ Get all survey templates available.
 
 ### Request
 ```http
-GET /v1.0/Survey/Templates HTTP/1.1
+GET /v1.0/survey/templates HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Cache-Control: no-cache
@@ -86,7 +86,7 @@ Get template by id.
 
 ### Request
 ```http
-GET /v1.0/Survey/Template/{templateId} HTTP/1.1
+GET /v1.0/survey/template/{templateId} HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Cache-Control: no-cache
@@ -131,7 +131,7 @@ All fields are reguired.
 
 ### Request
 ```http
-POST /v1.0/Survey HTTP/1.1
+POST /v1.0/survey HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Content-Type: application/json
@@ -140,8 +140,8 @@ Cache-Control: no-cache
 {
     "Name": "Test Survey",
 	"CompanyId": 0,
-	"Start": "2020-05-01T02:00:00.000Z"
-	"End": "2020-06-01T02:00:00.000Z"
+	"Start": "2020-05-01T02:00:00.000Z",
+	"End": "2020-06-01T02:00:00.000Z",
 	"State": 2,
 	"SurveySelectionRule": "{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"Manager":"GUNNAR"}}",
 	"Questions": [
@@ -149,6 +149,18 @@ Cache-Control: no-cache
 			"Type": 1,
 			"Texts": {
 				"1045": "Welcome to the survey about upcoming Christmas party."
+			}
+		},
+		{
+			"Type": 3,
+			"Texts": {
+				"1045": "What is your favorite alcohol?"
+			}
+		},
+		{
+			"Type": 99,
+			"Texts": {
+				"1045": "Thank you for your time."
 			}
 		}
 	]
@@ -171,29 +183,41 @@ All fields from [v1.0/Survey](#post-v1.0/Survey) plus following:
 
 ### Request
 ```http
-POST /v1.0/Survey/Update HTTP/1.1
+POST /v1.0/survey/update HTTP/1.1
 Host: <API_ENDPOINT>
 Authorization: Bearer <API_TOKEN_HERE>
 Content-Type: application/json
 Cache-Control: no-cache
  
 {
-    "Name": "Test Survey",
+	"Name": "Test Survey",
 	"CompanyId": 0,
-	"Start": "2020-05-01T02:00:00.000Z"
-	"End": "2020-06-01T02:00:00.000Z"
+	"Start": "2020-05-01T02:00:00.000Z",
+	"End": "2020-06-01T02:00:00.000Z",
 	"State": 2,
-	"SurveySelectionRule": "{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}",
+	"SurveySelectionRule": '{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}',
 	"Questions": [
 		{
 			"Type": 1,
 			"Texts": {
 				"1045": "Welcome to the survey about upcoming Christmas party."
 			}
+		},
+		{
+			"Type": 3,
+			"Texts": {
+				"1045": "What is your favorite alcohol?"
+			}
+		},
+		{
+			"Type": 99,
+			"Texts": {
+				"1045": "Thank you for your time."
+			}
 		}
 	],
-	Id: 0,
-	SurveyDefinitionId: 0
+	"Id": 0,
+	"SurveyDefinitionId": 0
 }
 ```
 
@@ -202,7 +226,7 @@ Cache-Control: no-cache
 
 
 ## POST v1.0/Survey/ChangeState/{surveyState}
-Change state of survey ids included in request payload.
+Change state of survey ids included in request payload as an array of integers.
 
 Please find all possible survey states [here](#SurveyState).
 
@@ -244,7 +268,7 @@ Cache-Control: no-cache
 Example:
 ```json
 {
-	"Frequency": "Hourly" | "Monthly" | "Quarterly" | "Continuous",
+	"Frequency": "Hourly",
 	"EnabledLanguages": [
 		{
 			"id": "integer",

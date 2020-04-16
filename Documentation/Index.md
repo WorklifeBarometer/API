@@ -1,7 +1,8 @@
 # Howdy API Documentation
 > These pages contains samples and specifications on how to integrate Howdy with HR-systems in order to maintain employee data.
 
-Documentation for Survey API available [here](./Survey.md).
+See also:
+- Survey API [documentation](./Survey.md).
 
 ## Endpoints
 

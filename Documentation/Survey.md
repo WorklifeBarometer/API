@@ -358,6 +358,7 @@ Example:
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | Texts             | Object of type [QuestionTexts](#questiontexts). Not null.					   |
+| Deleted           | Optional, true when option should be deleted.|
 
 ## Enums
 

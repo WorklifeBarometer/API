@@ -138,29 +138,29 @@ Content-Type: application/json
 Cache-Control: no-cache
  
 {
-    Name: "Test Survey",
-	CompanyId: 0,
-	Start: "2020-05-01T02:00:00.000Z",
-	End: "2020-06-01T02:00:00.000Z",
-	State: 2,
-	SurveySelectionRule: "{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}",
-	Questions: [
+  "Name": "Test Survey",
+	"CompanyId": 0,
+	"Start": "2020-05-01T02:00:00.000Z",
+	"End": "2020-06-01T02:00:00.000Z",
+	"State": 2,
+	"SurveySelectionRule": "{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"Manager":"GUNNAR"}}",
+	"Questions": [
 		{
-			Type: 1,
-			Texts: {
-				1045: "Welcome to the survey about upcoming Christmas party."
+			"Type": 1,
+			"Texts": {
+				"1045": "Welcome to the survey about upcoming Christmas party."
 			}
 		},
 		{
-			Type: 3,
-			Texts: {
-				1045: "What is your favorite alcohol?"
+			"Type": 3,
+			"Texts": {
+				"1045": "What is your favorite alcohol?"
 			}
 		},
 		{
-			Type: 99,
-			Texts: {
-				1045: "Thank you for your time."
+			"Type": 99,
+			"Texts": {
+				"1045": "Thank you for your time."
 			}
 		}
 	]
@@ -190,34 +190,34 @@ Content-Type: application/json
 Cache-Control: no-cache
  
 {
-	Name: "Test Survey",
-	CompanyId: 0,
-	Start: "2020-05-01T02:00:00.000Z",
-	End: "2020-06-01T02:00:00.000Z",
-	State: 2,
-	SurveySelectionRule: "{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}",
-	Questions: [
+	"Name": "Test Survey",
+	"CompanyId": 0,
+	"Start": "2020-05-01T02:00:00.000Z",
+	"End": "2020-06-01T02:00:00.000Z",
+	"State": 2,
+	"SurveySelectionRule": '{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}',
+	"Questions": [
 		{
-			Type: 1,
-			Texts: {
-				1045: "Welcome to the survey about upcoming Christmas party."
+			"Type": 1,
+			"Texts": {
+				"1045": "Welcome to the survey about upcoming Christmas party."
 			}
 		},
 		{
-			Type: 3,
-			Texts: {
-				1045: "What is your favorite alcohol?"
+			"Type": 3,
+			"Texts": {
+				"1045": "What is your favorite alcohol?"
 			}
 		},
 		{
-			Type: 99,
-			Texts: {
-				1045: "Thank you for your time."
+			"Type": 99,
+			"Texts": {
+				"1045": "Thank you for your time."
 			}
 		}
 	],
-	Id: 0,
-	SurveyDefinitionId: 0
+	"Id": 0,
+	"SurveyDefinitionId": 0
 }
 ```
 

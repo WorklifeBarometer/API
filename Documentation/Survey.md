@@ -215,7 +215,7 @@ Cache-Control: no-cache
 	"Start": "2020-05-01T02:00:00.000Z",
 	"End": "2020-06-01T02:00:00.000Z",
 	"State": 2,
-	"SurveySelectionRule": '{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}',
+	"SurveySelectionRule": "{"Frequency":"Quarterly","EnabledLanguages":"[{\"id\":1045,\"label\":\"English\",\"code\":\"en\"}]","Filters":{"ImmediateManager":"GUNNAR"}}",
 	"Questions": [
 		{
 			"Type": 1,

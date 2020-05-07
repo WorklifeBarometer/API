@@ -364,14 +364,14 @@ Example:
 ```
 
 ### AnswerOption
-When creating a new survey or adding a new question, `LabelKey` and `Value` are omited. System automatically assigns a value to these columns to maintain consistency. They can be then used to update existing answer options. When updating the answer option, both `LabelKey` and `Value` should not ever be changed since doing so could cause inconsistent data and wrong mapping of answer and options. The only thing that should be subject to change are `Texts` and only in the case of error in the text. When changing a meaning of an answer option, it is also good to consider treating them as immutable. Deleting one with old value and creating a new with the new value. That way the best experience of analyzing answers is ensured.
+When creating a new survey or adding a new question, `LabelKey` and `Value` are omitted. The system automatically assigns a value to these columns to maintain consistency. They can be then used to update existing answer options. When updating an answer option, both `LabelKey` and `Value` should never be changed since doing so could cause inconsistent data and wrong mapping of answers and options. The only thing that should be subject to change are `Texts` and only in the case of an error in the text. When changing a meaning of an answer option, it is also good to consider treating them as immutable. Deleting one with old value and creating a new with the new value. That way the best experience of analyzing answers is ensured.
 
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | Texts             | Object of type [QuestionTexts](#questiontexts). Not null.					   |
 | Deleted           | Optional, true when option should be deleted.|
-| LabelKey          | String, omited when creating a new option, required to update an existing answer option |
-| Value           	| Integer, omited when creating a new option, required to update an existing answer option. |
+| LabelKey          | String, omitted when creating a new option, required to update an existing answer option |
+| Value           	| Integer, omitted when creating a new option, required to update an existing answer option. |
 
 ## Enums
 

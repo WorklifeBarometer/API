@@ -128,7 +128,7 @@ Please find definition of [QuestionConfiguration](#questionconfiguration).
 
 ## POST v1.0/Survey
 
-Create new survey.
+Create a new survey.
 
 #### Data model
 
@@ -201,7 +201,7 @@ All fields from [v1.0/Survey](#post-v1.0/Survey) plus following:
 | SurveyDefinitionId | Id of corresponding survey definition. Integer, not null. This field is not subject to change. Each survey has fixed survey definition.|
 
 ### Request
-
+Please note that in the example payload below, three questions are being updated and one inserted.
 ``` http
 POST /v1.0/survey/update HTTP/1.1
 Host: <API_ENDPOINT>
@@ -219,18 +219,27 @@ Cache-Control: no-cache
 	"Questions": [
 		{
 			"Type": 1,
+			"Key": "Q1",
 			"Texts": {
 				"1045": "Welcome to the survey about upcoming Christmas party."
 			}
 		},
 		{
 			"Type": 3,
+			"Key": "Q2",
 			"Texts": {
 				"1045": "What is your favorite alcohol?"
 			}
 		},
 		{
+			"Type": 3,
+			"Texts": {
+				"1045": "What is your favorite Christmas dish?"
+			}
+		},
+		{
 			"Type": 99,
+			"Key": "Q3",
 			"Texts": {
 				"1045": "Thank you for your time."
 			}
@@ -326,6 +335,7 @@ Example:
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | Type              | Type of the question. Integer, not null. Valid value of [QuestionType](#questiontype) enum.|
+| Key 				| Key of the question. String, max length 20. When creating new question, this field is not included. System assigns a key to a question which is then included in [GET v1.0/Survey/{surveyId}](#GET-v1.0/Survey/{surveyId}). This key can then be used to update the question by including it in [POST v1.0/Survey/Update](#POST-v1.0/Survey/Update) request payload (see example payload). |
 | Texts             | Object of type [QuestionTexts](#questiontexts). Not null.|
 | AnswerOptions     | Array of [AnswerOption](#answeroption) type objects. Required when Type == 2.|
 | Deleted           | Optional, true when question should be deleted.|

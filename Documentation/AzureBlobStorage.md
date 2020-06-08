@@ -15,4 +15,4 @@ In order to verify that the file has been delivered correctly, the following com
 
     ./azcopy ls "https://<account-will-be-handed-out-on-request>.blob.core.windows.net/container?<shared-access-signature-will-be-handed-out-on-request>
 
-We suggest sending data daily, but it is up to you.
+We suggest sending data every night, but it is up to you.

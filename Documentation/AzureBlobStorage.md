@@ -1,7 +1,7 @@
 Azure Blob Storage
 ------------------
 
-As an alternative to calling our API directly, it is also possible to upload a file to our Azure Blob Storage.
+As an alternative to [calling our API directly](/WorklifeBarometer/API/blob/master/Documentation/Index.md), it is also possible to upload a file to our Azure Blob Storage.
 
 In this case Worklife Barometer will read, parse, and clean the data if necessary, and then call our own API.
 

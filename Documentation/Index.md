@@ -174,9 +174,9 @@ Cache-Control: no-cache
 ```json
 [
     {
-			"id": "integer",
-			"label": "string",
-			"code": "string"
-		}
+        "id": "integer",
+        "label": "string",
+        "code": "string"
+    }
 ]
 ```

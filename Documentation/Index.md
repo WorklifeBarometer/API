@@ -18,7 +18,7 @@ To obtain the token do the following:
     - Test: https://auth.worklifebarometer.com > Choose the test environment
 - Navigate to Company > Integrations and "Turn on external integration"
 - "Turn on automatic integration" and set the max difference to 25
-- Navigate to Users and look for a user with the name "&lt;CompanyName&gt; API User" (if you don't see it, please contact support at support@worklifebarometer.com)
+- Navigate to *Access control* and look for a user with the name "&lt;CompanyName&gt; API User" (if you don't see it, please contact support at support@worklifebarometer.com)
  - The API user should have the role HRIntegration. Click the three dots and then "Generate new App Token".
  - This should open a dialog box with a newly generated token and your company id
 

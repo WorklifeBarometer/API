@@ -56,7 +56,7 @@ This call makes a complete set based change of all employees in the system. Larg
 | Birthday          | Optional birthday of the employee, specified as YYYY-MM-DD
 | Phonenumber       | Cell phone. Unique. String. Must match regex: `^\+[0-9]{6,20}$` E.g. +4523232323                |
 | Email*            | E-mail address. Unique. In order to maintain the anonymity of employees, this cannot be changed through the API after it is first created. Only the employee and howdy support can change it.                 |
-| Gender            | Gender. Integer. Values: 0 = Male, 1 = Female, 9 = Not known                   |
+| Gender            | Gender. Integer. Values: 1 = Male, 2 = Female, 9 = Not known                   |
 | EmploymentStatus* | Employment Status. Integer. 0 = Active, 1 = "on leave" e.g. maternity leave etc.  |
 | JobTitle          | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |
 | HRContact         | String. Max length: 50. Must match regex: `^[\p{L} \\\/\-\'\.\,0-9]+$`. E.g. "Sales Manager" or "CEO"     |

@@ -1,4 +1,4 @@
-# Get Enabled Language
+# GET Enabled Language
 
 **URL** : `/v1.0/Company/{companyId}/Language/Enabled`
 

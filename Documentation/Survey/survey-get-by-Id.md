@@ -1,4 +1,5 @@
-# Get survey by Id
+# GET 
+get survey by Id
 
 >Please find definition of [QuestionConfiguration](./survey-interfaces.md#questionconfiguration) and [SurveySelectionRule](./survey-interfaces.md#surveyselectionrule).
 

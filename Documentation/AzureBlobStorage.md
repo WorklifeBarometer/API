@@ -1,5 +1,5 @@
-Azure Blob Storage
-------------------
+# Azure Blob Storage
+
 
 As an alternative to [calling our API directly](https://github.com/WorklifeBarometer/API/blob/master/Documentation/Index.md), it is also possible to upload a file to our Azure Blob Storage.
 
@@ -11,10 +11,12 @@ A shared access signature will be handed out on request. To test that the signat
 
 To upload a file to us for processing, use the following command after installing the [AZ Copy utility](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10):
 
+    ``` cmd
     ./azcopy cp 20200608.csv "https://<account-will-be-handed-out-on-request>.blob.core.windows.net/container/20200608.csv?<shared-access-signature-will-be-handed-out-on-request>
+    ```
 
 In order to verify that the file has been delivered correctly, the following command can be run:
-
+``` cmd
     ./azcopy ls "https://<account-will-be-handed-out-on-request>.blob.core.windows.net/container?<shared-access-signature-will-be-handed-out-on-request>
-
+```
 We suggest sending data every night, but it is up to you as a customer.

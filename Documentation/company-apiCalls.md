@@ -1,7 +1,6 @@
-# Get Api Calls
+# GET Api Calls
 
-
-**URL** : `/v1.0/Company/{companyId}/Language/Enabled`
+**URL** : `/v1.0/company/{companyId}/apicalls`
 
 **Method** : `GET`
 

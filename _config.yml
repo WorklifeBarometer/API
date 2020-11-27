@@ -1,2 +1,16 @@
 title: "Howdy API Documentation"
+logo: "/Assets/img/logo.png"
+# Aux links for the upper right navigation
+aux_links:
+  "Howdy Portal":
+    - "https://dashboard.worklifebarometer.com/"
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/WorklifeBarometer/API" # the github URL for your repo
+gh_edit_branch: "master" # the branch that your docs is served from
+exclude: [./Documentation/Index.md]
+color_scheme: howdy
 remote_theme: pmarsceill/just-the-docs

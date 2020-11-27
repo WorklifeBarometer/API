@@ -18,7 +18,7 @@
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | Frequency         | How often can survey be answered. Options: "Hourly", "Monthly", "Quarterly", "Continuous".|
-| EnabledLanguages  | Array of language objects. Please find list of all enabled languages [here](./company-language-enabled.md).|
+| EnabledLanguages  | Array of language objects. Please find list of all enabled languages [here](../../company-language-enabled.md).|
 | Filter		    | Object where key is company dimension key and value is desired dimension value. Only one key value pair is supported.|
 
 Example:
@@ -56,8 +56,8 @@ Example:
 
 | Field             | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
-| Type              | Type of the question. Integer, not null. Valid value of [QuestionType](#questiontype) enum.|
-| Key 				| Key of the question. String, max length 20. When creating new question, this field is not included. System assigns a key to a question which is then included in [GET v1.0/Survey/{surveyId}](./survey.md). This key can then be used to update the question by including it in [POST v1.0/Survey/Update](./surve-update.md) request payload (see example payload). |
+| Type              | Type of the question. Integer, not null. Valid value of [QuestionType](./survey-enum.md#questiontype) enum.|
+| Key 				| Key of the question. String, max length 20. When creating new question, this field is not included. System assigns a key to a question which is then included in [GET v1.0/Survey/{surveyId}](../survey-get-by-Id.md). This key can then be used to update the question by including it in [POST v1.0/Survey/Update](../surve-post.md) request payload (see example payload). |
 | Texts             | Object of type [QuestionTexts](#questiontexts). Not null.|
 | AnswerOptions     | Array of [AnswerOption](#answeroption) type objects. Required when Type == 2.|
 | Deleted           | Optional, true when question should be deleted.|
@@ -94,22 +94,3 @@ When creating a new survey or adding a new question, `LabelKey` and `Value` are 
 | Deleted           | Optional, true when option should be deleted.|
 | LabelKey          | String, omitted when creating a new option, required to update an existing answer option |
 | Value           	| Integer, omitted when creating a new option, required to update an existing answer option. |
-
-
-# Enums
-
-## SurveyState
-| Value             | Description                                                                  |
-| ----------------- | ---------------------------------------------------------------------------- |
-| 2                 | Active survey																   |
-| 3                 | Inactive survey															   |
-
-## QuestionType
-
-| Value             | Description                                                                  |
-| ----------------- | ---------------------------------------------------------------------------- |
-| 1                 | Cover page																   |
-| 2                 | Question with answer options												   |
-| 3                 | Question with text answer													   |
-| 99                | Thank you page															   |
-

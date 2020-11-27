@@ -1,4 +1,5 @@
-# Get all survey templates available
+# GET 
+Get all survey templates available
 
 **URL** : `/v1.0/survey/templates`
 
@@ -41,7 +42,7 @@ Cache-Control: no-cache
 
 ## Get template by id
 
->Please find definition of [QuestionConfiguration](./survey-interfaces.md#questionconfiguration).
+>Please find definition of [QuestionConfiguration](./Model/survey-interface.md#questionconfiguration).
 
 **URL** : `v1.0/Survey/Template/{templateId}`
 

@@ -33,24 +33,15 @@ This call makes a complete set based change of all employees in the system.
 | `Lastname`\*         | `String`  | *Max length:* **150**                             | Lastname of the employee                                        |
 | `Phonenumber`        | `String`  | *Must match regex:* `^\+[0-9]{6,20}$`, `Unique`   | Cell phone E.g. +4523232323                                     |
 | `Email`\*            | `String`  | Valid email, `Unique`                             | E-mail address                                                  |
-| `Gender`             | `Integer` | `0` = **Male**, `1` = **Female**, `9` = **Unknown**| Gender                                                          |
+| `Gender`             | `Integer` | `0` = **Male**, `1` = **Female**, `9` = **Unknown**| Gender                                                         |
 | `EmploymentStatus`\* | `Integer` | `0` = **Active**,  `1` = **On leave**             | Employment Status                                               |
 | `JobTitle`           | `String`  | *Max length:* **50**                              | Users Role in the company. E.g. "Sales Manager" or "CEO"        |
 | `Department`         | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
 | `Role`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
 | `ImmediateManager`   | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim1`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim2`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim3`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim4`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim5`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim6`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim7`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim8`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim9`               | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-| `Dim10`              | `String`  | *Max length:* **50**                              | Reporting specific data                                         |
-
 **\*** Required
+| `Dimensions`         | `Object`  | Key-Value pair, Value *Max length:* **50**        | Other reporting specific data Eg. Location, Division            |
+
 
 **\*\***
 
@@ -77,6 +68,10 @@ Cache-Control: no-cache
     "Phonenumber": "+00008462",
     "Birthday": null,
     "Gender": 9,
+    "Dimensions": {
+        "Location": "The Shire",
+        "Division": "Hobbits"
+    }
     ...
   },
   ...

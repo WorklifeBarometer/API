@@ -8,7 +8,7 @@ nav_order: 3
 
 ## Company id and access token
 
-See [Getting Started](../Index.md#security) on how to retrieve your company id and access token.
+See [Getting Started](./API.md#security) on how to retrieve your company id and access token.
 
 ## Request data from the API
 

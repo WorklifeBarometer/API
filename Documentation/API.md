@@ -10,18 +10,18 @@ nav_order: 4
 ---
 
 # Security
-See [Security](../Index.md#security) for obtaning an `Authorization` token required for **Every** http call
+See [Security](../Index.md#security) for obtaining an `Authorization` token required for **every** http call
 
 # API
 
 | URL Name  | Methods allowed   |
 |:--|--:|
-|[/v1.0/Company/{companyId}/Employee](./Documentation/company-employee.md)|GET, PUT|
-|[/v1.0/Company/{companyId}/ApiCalls](./Documentation/company-apiCalls.md)| GET|
-|[/v1.0/Company/{companyId}/Language/Enabled](./Documentation/companyi-language-enabled.md)| GET|
-|[/v1.0/Survey?companyId={companyId}](./Documentation/survey.md)|GET|
-|[/v1.0/Survey/{surveyId}](./Documentation/survey-surveyId.md)|GET|
-|[/v1.0/Survey/ChangeState/{surveyState}](./Documentation/survey-changestate.md)| POST|
+|[/v1.0/Company/{companyId}/Employee](./Employee/company-employee-get.md)|GET, PUT|
+|[/v1.0/Company/{companyId}/ApiCalls](./Company/company-apiCalls.md)| GET|
+|[/v1.0/Company/{companyId}/Language/Enabled](./Company/company-language-enabled.md)| GET|
+|[/v1.0/Survey?companyId={companyId}](./Survey/survey-get.md)|GET|
+|[/v1.0/Survey/{surveyId}](./Survey/survey-get-by-Id.md)|GET|
+|[/v1.0/Survey/ChangeState/{surveyState}](./Survey/Change%20State/survey-changestate.md)| POST|
 
 # Survey Models
-See [Survey Models](./Documentation/survey-interface.md)
+See [Survey Models](./Survey/Model/survey-interface.md)

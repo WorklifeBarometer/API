@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Enums
-nav_order: 2
-parent: Model
-grand_parent: Survey
+parent: Survey
+grand_parent: Advanced
 ---
 
 # Enums

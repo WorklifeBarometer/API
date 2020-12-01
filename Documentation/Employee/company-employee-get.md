@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GET
+title: GET Employees
 nav_order: 1
 parent: Employee
 grand_parent: Advanced

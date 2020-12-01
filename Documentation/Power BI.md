@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Power BI
-nav_order: 3
+nav_order: 2
+parent: Advanced
 ---
 
 # Visualize your wellbeing data with Power BI

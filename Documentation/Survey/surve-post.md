@@ -1,8 +1,9 @@
 ---
 layout: default
-title: POST
+title: POST New Survey
 nav_order: 4
 parent: Survey
+grand_parent: Advanced
 ---
 
 # POST
@@ -15,7 +16,7 @@ Update existing survey
 **Auth required** : YES
 
 **Note**
-see [Survey Models](./Model/survey-interface.md)
+see [Survey Models](./survey-interface.md)
 
 **Data constraints**
 
@@ -29,9 +30,9 @@ All fields are reguired.
 | CompanyId\*         | `Integer` |                                                         | Id of your company                                             |
 | Start\*             | `String`  | format: *yyyy-MM-ddTHH:mm:ssZ*                          | Date and time when a new survey starts to be available         |
 | End\*               | `String`  | format: *yyyy-MM-ddTHH:mm:ssZ*                          | Date and time when a new survey starts to be unavailable       |
-| State\*             | `Integer` |                                                         | Valid value of [Survey State](./Model/survey-enum.md#surveystate) enum	 |
-| SurveySelectionRule | `String`  | [SurveySelectionRule](./Model/survey-interface.md#surveyselectionrule) interface   | JSON of [SurveySelectionRule](./Model/survey-interface.md#surveyselectionrule) interface. |
-| Questions\*\*       | `JSON`    | Array of [SurveyQuestion](./Model/survey-interface.md#surveyquestion) type objects | Questions of the new survey.                                   |
+| State\*             | `Integer` |                                                         | Valid value of [Survey State](./survey-enum.md#surveystate) enum	 |
+| SurveySelectionRule | `String`  | [SurveySelectionRule](./survey-interface.md#surveyselectionrule) interface   | JSON of [SurveySelectionRule](./survey-interface.md#surveyselectionrule) interface. |
+| Questions\*\*       | `JSON`    | Array of [SurveyQuestion](./survey-interface.md#surveyquestion) type objects | Questions of the new survey.                                   |
 
 **\*** Requried
 

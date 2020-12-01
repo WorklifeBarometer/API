@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API
-nav_order: 2
+nav_order: 3
 parent: Advanced
 ---
 
@@ -44,7 +44,7 @@ The Token can be sent in one of two ways:
 |[/v1.0/Company/{companyId}/Language/Enabled](./Company/company-language-enabled.md)| GET|
 |[/v1.0/Survey?companyId={companyId}](./Survey/survey-get.md)|GET|
 |[/v1.0/Survey/{surveyId}](./Survey/survey-get-by-Id.md)|GET|
-|[/v1.0/Survey/ChangeState/{surveyState}](./Survey/Change%20State/survey-changestate.md)| POST|
+|[/v1.0/Survey/ChangeState/{surveyState}](./Survey/survey-changestate.md)| POST|
 
 ## Survey Models
-See [Survey Models](./Survey/Model/survey-interface.md)
+See [Survey Models](./Survey/survey-interface.md)

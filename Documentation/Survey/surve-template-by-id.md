@@ -1,14 +1,13 @@
 ---
 layout: default
-title: GET by Id
-nav_order: 2
-parent: Template
-grand_parent: Survey
+title: GET Survey Template By Id
+parent: Survey
+grand_parent: Advanced
 ---
 
 
 # GET
-Please find definition of [QuestionConfiguration](../Model/survey-interface.md#questionconfiguration).
+Please find definition of [QuestionConfiguration](./survey-interface.md#questionconfiguration).
 
 **URL** : `v1.0/Survey/Template/{templateId}`
 

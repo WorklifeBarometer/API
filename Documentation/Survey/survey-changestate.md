@@ -1,15 +1,14 @@
 ---
 layout: default
-title: POST
-nav_order: 1
-parent: Change State
-grand_parent: Survey
+title: POST Change survey state
+parent: Survey
+grand_parent: Advanced
 ---
 
 
 # POST
 Change state of survey ids included in request payload as an array of integers.
-Please find all possible survey states [here](../Model/survey-enum.md#SurveyState).
+Please find all possible survey states [here](./survey-enum.md#SurveyState).
 
 **URL** : `/v1.0/Survey/ChangeState/{surveySate}`
 

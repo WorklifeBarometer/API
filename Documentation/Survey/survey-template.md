@@ -1,9 +1,8 @@
 ---
 layout: default
-title: GET
-nav_order: 1
-parent: Template
-grand_parent: Survey
+title: GET All Survey Templates
+parent: Survey
+grand_parent: Advanced
 ---
 
 

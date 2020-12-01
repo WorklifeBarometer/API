@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Interface
-nav_order: 1
-parent: Model
-grand_parent: Survey
+parent: Survey
+grand_parent: Advanced
 ---
 
 # Interfaces
@@ -26,7 +25,7 @@ grand_parent: Survey
 | Field            | Type                        | Requirements                                                | Description                                                                          |
 | :--------------- | :-------------------------- | :---------------------------------------------------------- | :----------------------------------------------------------------------------------- |
 | Frequency        | `String`                    | **Options:** `Hourly`, `Monthly`, `Quarterly`, `Continuous` | How often can survey be answered.                                                    |
-| EnabledLanguages | `Array of language objects` |                                                             | Please find list of all enabled languages [here](../../company-language-enabled.md). |
+| EnabledLanguages | `Array of language objects` |                                                             | Please find list of all enabled languages [here](../Company/company-language-enabled.md). |
 | Filter           | `Object`                    | Company dimension key ("ImmediateManager", "Department")    | Value is desired dimension value. Only one key value pair is supported.              |
 
 Example:
@@ -77,7 +76,7 @@ Example:
 **\*\*\*** Required when `Type` is `2`
 
 **Note**
-System assigns a `Key` to a question which is then included in [GET v1.0/Survey/{surveyId}](../survey-get-by-Id.md). This key can then be used to update the question by including it in [POST v1.0/Survey/Update](../surve-post.md) request payload (see example payload)
+System assigns a `Key` to a question which is then included in [GET v1.0/Survey/{surveyId}](./survey-get-by-Id.md). This key can then be used to update the question by including it in [POST v1.0/Survey/Update](./surve-post.md) request payload (see example payload)
 
 ### Example:
 

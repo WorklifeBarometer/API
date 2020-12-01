@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PUT
+title: PUT Employees
 nav_order: 2
 parent: Employee
 grand_parent: Advanced

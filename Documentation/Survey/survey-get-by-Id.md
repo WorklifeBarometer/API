@@ -1,7 +1,6 @@
 ---
 layout: default
-title: GET by Id
-nav_order: 5
+title:  GET Survey by Id
 parent: Survey
 grand_parent: Advanced
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Power Bi
+title: Power BI
 nav_order: 3
 ---
 

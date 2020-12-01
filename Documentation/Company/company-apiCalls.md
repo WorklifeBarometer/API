@@ -3,6 +3,7 @@ layout: default
 title: GET API Calls
 nav_order: 1
 parent: Company
+grand_parent: Advanced
 ---
 
 # Api Calls

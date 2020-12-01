@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Azure Blob Storage
-nav_order: 2
+nav_order: 1
+parent: Advanced
 ---
 
 # Azure Blob Storage

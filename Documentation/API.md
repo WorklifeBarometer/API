@@ -1,7 +1,8 @@
 ---
 layout: default
 title: API
-nav_order: 4
+nav_order: 2
+parent: Advanced
 ---
 
 # Howdy API Documentation
@@ -11,6 +12,7 @@ nav_order: 4
 
 # Security
 See [Security](../Index.md#security) for obtaining an `Authorization` token required for **every** http call
+
 
 # API
 

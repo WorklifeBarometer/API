@@ -3,6 +3,7 @@ layout: default
 title: GET
 nav_order: 6
 parent: Survey
+grand_parent: Advanced
 ---
 
 

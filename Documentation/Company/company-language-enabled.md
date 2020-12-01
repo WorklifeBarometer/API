@@ -3,6 +3,7 @@ layout: default
 title: GET Enabled Language
 nav_order: 2
 parent: Company
+grand_parent: Advanced
 ---
 
 # Enabled Language

@@ -10,13 +10,13 @@ parent: Advanced
 
 ---
 
-# Endpoints
+## Endpoints
 
 **Test:**  [https://wlb-uat-ne1-api.azurewebsites.net/](https://wlb-uat-ne1-api.azurewebsites.net/)
 
 **Production:**  [https://api-ne1.worklifebarometer.com/](https://api-ne1.worklifebarometer.com/)
 
-# Security
+## Security
 All calls to the API **must be authenticated** by presenting a valid JWT ([JSON Web Token](https://jwt.io/)).
 
 To obtain the token do the following:
@@ -35,7 +35,7 @@ The Token can be sent in one of two ways:
 - **Query String parameter**: Pass it as parameter `?access_token=<API_TOKEN_HERE>` to url for each request
 
 
-# API
+## API
 
 | URL Name  | Methods allowed   |
 |:--|--:|
@@ -46,5 +46,5 @@ The Token can be sent in one of two ways:
 |[/v1.0/Survey/{surveyId}](./Survey/survey-get-by-Id.md)|GET|
 |[/v1.0/Survey/ChangeState/{surveyState}](./Survey/Change%20State/survey-changestate.md)| POST|
 
-# Survey Models
+## Survey Models
 See [Survey Models](./Survey/Model/survey-interface.md)

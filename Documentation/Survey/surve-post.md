@@ -1,7 +1,6 @@
 ---
 layout: default
 title: POST New Survey
-nav_order: 4
 parent: Survey
 grand_parent: Advanced
 ---

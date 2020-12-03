@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Enums
+nav_order: 2
 parent: Survey
 grand_parent: Advanced
 ---

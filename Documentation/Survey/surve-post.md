@@ -6,7 +6,7 @@ grand_parent: Advanced
 ---
 
 # POST
-Update existing survey
+Create a survey.
 
 **URL** : `/v1.0/survey`
 

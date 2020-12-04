@@ -66,8 +66,8 @@ Example:
 | :------------------ | :----------------------------- | :---------------------------------------------------------------- | :------------------------------------------------------------------------------ |
 | Type\*              | `Integer`                      | Valid value of [QuestionType](./survey-enum.md#questiontype) enum | Type of the question                                                            |
 | Key\*\*             | `String`, *Max length:* **20** |                                                                   | Key of the question. **When creating new question this field is not included**  |
-| Texts\*             | `JSON object`                  | Object of type [QuestionTexts](#questiontexts)                    | The qestion/qeestions you would want to ask                                     |
-| AnswerOptions\*\*\* | `JSON object`                  | Array of [AnswerOption](#answeroption) type objects               | The answers aviable                                                             |
+| Texts\*             | `JSON object`                  | Object of type [QuestionTexts](#questiontexts)                    | The question/questions you would want to ask                                     |
+| AnswerOptions\*\*\* | `JSON object`                  | Array of [AnswerOption](#answeroption) type objects               | The answers available                                                             |
 | Deleted             | `Boolean`                      |                                                                   | True when question should be deleted                                            |
 
 **\*** Required

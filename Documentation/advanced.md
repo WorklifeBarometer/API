@@ -14,7 +14,7 @@ Following the steps above results in Authentication token used in **ALL** Api ca
 
 ### Test Environment
 
-Test Environment (also called *UAT*) is used to test new features and resets once a day, meening any and all changes made to the system are overwriten by the data used in production.
+Test Environment (also called *UAT*) is used to test new features and resets once a day, meaning any and all changes made to the system are overwritten by the data used in production.
 
 ### Batch limit
 
@@ -24,7 +24,7 @@ Percent of allowed change per one request*
 
 **x** = Employees already in system
 
-**y** = Employees beeing send from request
+**y** = Employees being send from request
 
 **z** = Batch limit
 
@@ -36,4 +36,4 @@ Percent of allowed change per one request*
 
 ### Automatically invite
 
-If **InvitationDate** is not set and this is enabled everytime a new user is added an invitation is send.
+If **InvitationDate** is not set and this is enabled, every time a new user is added an invitation is send.

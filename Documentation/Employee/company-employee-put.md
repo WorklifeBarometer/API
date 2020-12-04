@@ -30,8 +30,8 @@ This call makes a complete set based change of all employees in the system.
 | -------------------- | --------- | ------------------------------------------------- | --------------------------------------------------------------- |
 | `EmployeeID`\*       | `String`  | `Unique`, *Max length:* **50**                    | Your internal primary key                                       |
 | `InvitationDate`\*\* | `String`  | *Format:* `yyyy-MM-ddTHH:mm:ssZ`                  | Date and time when to sent out invitation                       |
-| `Firstname`\*        | `String`  | *Max length:* **150**                             | Firstname of the employee                                       |
-| `Lastname`\*         | `String`  | *Max length:* **150**                             | Lastname of the employee                                        |
+| `Firstname`\*        | `String`  | *Max length:* **150**                             | First name of the employee                                       |
+| `Lastname`\*         | `String`  | *Max length:* **150**                             | Last name of the employee                                        |
 | `Phonenumber`        | `String`  | *Must match regex:* `^\+[0-9]{6,20}$`, `Unique`   | Cell phone E.g. +4523232323                                     |
 | `Email`\*            | `String`  | Valid email, `Unique`                             | E-mail address                                                  |
 | `Gender`             | `Integer` | `0` = **Male**, `1` = **Female**, `9` = **Unknown**| Gender                                                         |
@@ -47,7 +47,7 @@ This call makes a complete set based change of all employees in the system.
 
 **\*\*** InvitationDate
 - Only for new employees. 
-- If obmitted then then invitation will be sent immediately or at 8 o'clock if outside business hours
+- If omitted then then invitation will be sent immediately or at 8 o'clock if outside business hours
 
 ## Example
 The request consists of an array of Employees based on the model described above.

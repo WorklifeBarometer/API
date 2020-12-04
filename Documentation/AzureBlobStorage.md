@@ -8,7 +8,7 @@ parent: Advanced
 # Azure Blob Storage
 
 As an alternative to calling our [API](./API.md) directly, it is also possible to upload a file to our Azure Blob Storage.
-In this case Worklife Barometer will read, parse, and clean the data if necessary, and then call our own API.
+In this case WorklifeBarometer will read, parse, and clean the data if necessary, and then call our own API.
 
 > We suggest sending the data as CSV with UTF-8 encoding, but we support all standard formats, such as JSON, XML, XLSX etc.
 
@@ -26,5 +26,3 @@ In order to verify that the file has been delivered correctly, the following com
 ```
 
 We suggest sending data every night, but it is up to you as a customer.
-
-**\*** Recomended not required

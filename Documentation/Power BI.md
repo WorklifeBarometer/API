@@ -21,7 +21,7 @@ Don't click OK yet. Instead click **Advanced** and fill in an HTTP request param
 In the header key choose **Authorization**
 In the header value type `Bearer ` (including the space), followed by your **access token**.
 
-![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_authorization.png)
+![Authorization](../Assets/img/power_bi_authorization.png "Authorization")
 
 Now click **OK** and on the next page simply click **Connect**. After a little while you should now see something like this:
 

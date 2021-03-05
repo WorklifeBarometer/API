@@ -25,7 +25,7 @@ In the header value type `Bearer ` (including the space), followed by your **acc
 
 Now click **OK** and on the next page simply click **Connect**. After a little while you should now see something like this:
 
-![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_unmodified_result.png)
+![Authorization](../Assets/img/power_bi_unmodified_result.png)
 
 ## Format the JSON data for use by Power BI
 
@@ -33,7 +33,7 @@ We need to extract the right parts of the data for use by Power BI:
 
 - Right click in the answers List cell and click **Drill Down**
 
-![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_list_of_records.png)
+![Authorization](../Assets/img/power_bi_list_of_records.png)
 
 - You should see a list of records. Right click the header row and then To Table. Click OK in the dialog.
 - Now you get a new table with again just `Record` listed as content.
@@ -41,7 +41,7 @@ We need to extract the right parts of the data for use by Power BI:
 
 - In the top right of this table there should be a *splitter* icon. Click it.
 
-![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_column_names.png)
+![Authorization](../Assets/img/power_bi_column_names.png)
 
 - In the dialog unselect `Use original column name as prefix` and then clik **OK**.
 - Now you should see some actual data. We still need to provide some data type information.
@@ -56,11 +56,11 @@ We need to extract the right parts of the data for use by Power BI:
 - Remove the date and quarter components from the date, since the data is provided on a monthly basis
 - Drill down in the graph to see the visualization by month (the third little button in the upper left part of the chart)
 
-![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_drill_down.png)
+![Authorization](../Assets/img/power_bi_drill_down.png)
 
 - Now you should see something like this, depending on your departmental structure and wellbeing data of course:
 
-![Authorization](https://raw.githubusercontent.com/WorklifeBarometer/API/master/power_bi_final_result.png)
+![Authorization](../Assets/img/power_bi_final_result.png)
 
 ## Case data
 

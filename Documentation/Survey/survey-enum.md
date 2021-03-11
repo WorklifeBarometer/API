@@ -6,21 +6,23 @@ parent: Survey
 grand_parent: Advanced
 ---
 
-# Enums
+# Enumerations
 
 ## SurveyState
 
-| Value             | Description                                                                  |
-| ----------------- | ---------------------------------------------------------------------------- |
+| Value             | Description                                    |
+| ----------------- | -----------------------------------------------|
+| 1                 | Draft
 | 2                 | Active survey																   |
 | 3                 | Inactive survey															   |
 
 ## QuestionType
 
-| Value             | Description                                                                  |
-| ----------------- | ---------------------------------------------------------------------------- |
+| Value             | Description                                  |
+| ----------------- | ---------------------------------------------|
 | 1                 | Cover page																   |
-| 2                 | Question with answer options												   |
-| 3                 | Question with text answer													   |
-| 99                | Thank you page															   |
+| 2                 | Question with answer options								 |
+| 3                 | Question with text answer										 |
+| 4                 | Howdy Body question													 |
+| 99                | Thank you page															 |
 

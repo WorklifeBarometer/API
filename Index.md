@@ -53,5 +53,5 @@ This will enable you to use our API, for more information please see [API Securi
 See our [C# Sample code](./Samples/ActiveDirectoryExample/ActiveDirectoryExample).
 
 ## Send us a file with the data
-The last option is for you to simply upload a document to our data storage (see [Azure Storage](./Documentation/AzureBlobStorage.md)). We will monitor for file uploads. Oncea file is discovered, it will be parsed and used to refresh the data in Howdy.
+The last option is for you to simply upload a document to our data storage (see [Azure Storage](./Documentation/AzureBlobStorage.md)). We will monitor for file uploads. When a file is discovered, it will be parsed and used to refresh the data in Howdy.
 

@@ -18,7 +18,7 @@ These page contains samples and specifications on how to integrate Howdy with HR
 # Getting started
 Once your company is created in our [Howdy Portal](https://dashboard.worklifebarometer.com/) you have three options for how to keep your employee data up to date and relevant, this helps you get more out of our product as well it helps us provide a better and more accurate service.
 
-## Option 1
+## Manually upload the data in the Howdy Portal
 Manually invite or update your employee data using [Howdy Portal](https://dashboard.worklifebarometer.com/) 
 - Navigate to **Employees** in side menu
 - Select desired employee
@@ -40,8 +40,8 @@ When pasting your data please remember to include at least the following columns
 
 **ATTENTION:** When a new employee is created in Howdy, the mandatory field `Employee ID` must be specified. The employee ID is a unique key that identifies the employee and can be a number that already exists for the employee, for example from an accounting, HR or payroll system. The key can be up to fifty characters long and once it is filled in and saved, it can no longer be corrected (the field becomes "**Read Only**"). The key can consist of numbers, letters and special characters.
 
-## Option 2
-Second options is to use our [Integration API](./Documentation/API.md). This is a more advanced way to use our system but it give you more control over what data you share with us and when. To use our API you are required to enable it before hand by:
+## Integration API
+The second option is to use our [Integration API](./Documentation/API.md). To use our API you are required to enable it beforehand:
 - Click **Company** in side menu
 - Navigate to **Integration** and **Turn On External Integration**
   - Turn on **Batch limit** and set the max difference to 25 (Recommended)
@@ -52,6 +52,6 @@ This will enable you to use our API, for more information please see [API Securi
 
 See our [C# Sample code](./Samples/ActiveDirectoryExample/ActiveDirectoryExample).
 
-## Options 3
-The last option is for you to provide us with the employee data where you simply upload a document to our data storage solution (see [Azure Storage](./Documentation/AzureBlobStorage.md)) and we will handle the rest for you. This is the easiest solution for you, but it takes away control. If this is the way you would like to use, please contact us at [support@worklifebarometer.com](mailto:support@worklifebarometer.com) for further instructions.
+## Send us a file with the data
+The last option is for you to simply upload a document to our data storage (see [Azure Storage](./Documentation/AzureBlobStorage.md)). We will monitor for file uploads. Oncea file is discovered, it will be parsed and used to refresh the data in Howdy.
 

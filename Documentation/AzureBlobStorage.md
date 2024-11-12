@@ -7,9 +7,6 @@ parent: Advanced
 
 # Azure Blob Storage
 
-As an alternative to calling our [API](./API.md) directly, it is also possible to upload a file to our Azure Blob Storage.
-In this case WorklifeBarometer will read, parse, and clean the data if necessary, and then call our own API.
-
 We suggest sending the data as CSV with UTF-8 encoding, but we support all standard formats, such as JSON, XML, XLSX etc.
 
 A shared access signature will be handed out on request. To test that the signature works and to familiarize yourself with Azure Blob Storage we suggest that you use the [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) to access the container.

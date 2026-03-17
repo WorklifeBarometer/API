@@ -40,6 +40,7 @@ The Token can be sent in one of two ways:
 | URL Name                                                                            | Methods allowed |
 | :---------------------------------------------------------------------------------- | --------------: |
 | [/v1.0/Company/`companyId`/Employee](./Employee/company-employee-get.md)            |        GET, PUT |
+| [/v1.0/User/`companyId`/ManagerImport](./User/company-manager-import.md)            |             PUT |
 | [/v1.0/Company/`companyId`/ApiCalls](./Company/company-apiCalls.md)                 |             GET |
 | [/v1.0/Company/`companyId`/Language/Enabled](./Company/company-language-enabled.md) |             GET |
 | [/v1.0/Survey?companyId=`companyId`](./Survey/survey-get.md)                        |             GET |
